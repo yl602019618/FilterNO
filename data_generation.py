@@ -48,15 +48,15 @@ class fx():
     
 class DataGen():
     """"A fully connected layer that reshapes outputs to feature maps."""
-    def __init__(self, T = 0.1, 
+    def __init__(self, T = 0.5, 
                  num_step = 50, 
                  R = 3, 
-                 h =0.1, 
-                 N_sample = 100,
-                 al = 20,
-                 au = 30,
-                 gl = -1,
-                 gu = 1):
+                 h =0.2, 
+                 N_sample = 500,
+                 al = 10,
+                 au = 20,
+                 gl = -1.5,
+                 gu = 1.5):
         super().__init__()
         self.T = T
         self.num_step = num_step
@@ -163,7 +163,7 @@ class DataGen():
 
 if __name__ == '__main__':
     
-    gen = DataGen(N_sample=300)
+    gen = DataGen(N_sample=500)
     gen.sample()
-    for i in tqdm(range(300)):
+    for i in tqdm(range(500)):
         gen.generate(i)
