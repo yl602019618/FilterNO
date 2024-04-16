@@ -1,0 +1,52 @@
+Project:
+  name: 'FNO'
+  experiment: 'FNO'
+  checkpoint: False
+  save_top_k: 3
+  erase: True
+  do: 'train'
+  devices: 1
+  accelerator: 'gpu'
+  save: False
+
+
+data:
+  train_num: 450
+  valid_num: 50
+  load_workers: 1
+  frequency: 1
+  batch: 10
+  size: 61
+  PATH: '/Users/dp/Documents/清华/FilterData/data'
+  step: 10
+model:
+  name: "FNO"
+  mode: 20
+  width: 20
+  padding: 3
+  in: 1
+  out: 1
+  loss: 'rel_l2'
+
+  
+
+
+  
+
+train:
+  batchsize: 10
+  epochs: 100
+  lr: 0.01
+  step_size: 100
+  gamma: 0.5
+  weight_decay: 0.00001
+  eta_min: 0.0005
+  add_term: True
+
+
+
+
+ckpt:
+  PATH: "save_files"
+  save_dir: 'FNO'
+  alias: 'FNO'

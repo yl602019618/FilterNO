@@ -51,7 +51,7 @@ class DataGen():
     def __init__(self, T = 0.5, 
                  num_step = 50, 
                  R = 3, 
-                 h =0.2, 
+                 h =0.1, 
                  N_sample = 500,
                  al = 10,
                  au = 20,
